@@ -23,3 +23,21 @@
 
 'use strict';
 
+let numberOfFilms = +prompt("How many movies have u watched?", "");
+
+console.log("Number of movies u have watched: " + numberOfFilms);
+
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    private: false
+};
+
+let firstQuestion = prompt("The last watched movie?", "");
+let secondQuestion = prompt("Your score for this movie?", "");
+
+personalMovieDB.movies[firstQuestion] = secondQuestion;
+
+console.log(personalMovieDB.movies);
